@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management</title>
+    <style>
+        body { font-family: Arial; background: lightblue; }
+        table { border-collapse: collapse; }
+        th, td { border: 1px solid black; padding: 7px; }
+        input { margin: 5px; }
+    </style>
+</head>
+<body>
+
+<h1>College Library</h1>
+
+<nav>
+    <a href="#books">Books</a> |
+    <a href="#issue">Issue Book</a>
+</nav>
+
+<h2 id="books">Available Books</h2>
+
+<table>
+    <tr><th>Book</th><th>Author</th></tr>
+    <tr><td>Python</td><td>John</td></tr>
+    <tr><td>Java</td><td>Smith</td></tr>
+</table>
+
+<h2 id="issue">Book Issue Form</h2>
+
+<form onsubmit="issueBook(event)">
+    Student Name: <input type="text" required><br>
+    Book Name: <input type="text" required><br>
+    <input type="submit" value="Issue Book">
+</form>
+
+<p id="msg"></p>
+
+<script>
+function issueBook(e) {
+    e.preventDefault();
+    document.getElementById("msg").innerHTML =
+        "Book Issued Successfully!";
+}
+</script>
+
+</body>
+</html>
